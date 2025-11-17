@@ -24,14 +24,14 @@ A Next.js website for the UMass Amherst Cybersecurity Club, featuring event list
 
 ## Project Structure
 
-app/
-├── page.tsx          # Home page
-├── events/
-│   └── page.tsx      # Events listing
-├── about/
-│   └── page.tsx      # About page
-├── layout.tsx        # Root layout with navigation
-└── globals.css       # Global styles
+app/  
+    page.tsx          # Home page  
+    events/  
+        page.tsx      # Events listing  
+    about/  
+        page.tsx      # About page  
+    layout.tsx        # Root layout with navigation  
+    globals.css       # Global styles  
 
 ## Features
 
