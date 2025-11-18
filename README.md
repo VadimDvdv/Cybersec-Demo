@@ -34,12 +34,12 @@ app/
         page.tsx      # About page  
     layout.tsx        # Root layout with navigation  
     globals.css       # Global styles  
-    lib/
-        events.ts     # Helper functions
-    content/          # Markdown pages
-        events/
-            ctf-team-meeting.md
-            ..
+lib/
+    events.ts         # Helper functions
+content/              # Markdown pages
+    events/
+        ctf-team-meeting.md
+        ..
 ```
 
 ## Features
