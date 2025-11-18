@@ -4,7 +4,7 @@ A Next.js website for the UMass Amherst Cybersecurity Club, featuring event list
 
 ## Tech Stack
 
-- **Framework**: Next.js 14 with App Router
+- **Framework**: Next.js 15 with App Router
 - **Language**: TypeScript
 - **Styling**: CSS Modules
 - **Deployment**: Vercel (pending)
@@ -23,29 +23,36 @@ A Next.js website for the UMass Amherst Cybersecurity Club, featuring event list
 4. Open [http://localhost:3000](http://localhost:3000)
 
 ## Project Structure
-
+```
 app/  
     page.tsx          # Home page  
     events/  
-        page.tsx      # Events listing  
-    about/  
+        page.tsx      # Events listing
+        [slug]/       # Dynamic Route
+            page.tsx  
+    about/
         page.tsx      # About page  
     layout.tsx        # Root layout with navigation  
     globals.css       # Global styles  
+    lib/
+        events.ts     # Helper functions
+    content/          # Markdown pages
+        events/
+            ctf-team-meeting.md
+            ..
+```
 
 ## Features
 
 - Clean, responsive design
 - Event listings
 - Club information
-- Markdown-based events (coming Monday)
-- Dynamic routing (coming Monday)
-- API endpoints (coming Monday)
+- Markdown-based events
+- Dynamic routing
+- API endpoints (coming Tuesday)
 
 ## Next Steps
 
-- Implement Markdown-based content management
-- Add dynamic routing for individual event pages
 - Deploy to Vercel
 - Add search/filter functionality
 
