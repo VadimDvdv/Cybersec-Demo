@@ -1,6 +1,6 @@
 ---
 slug: ctf-team-meeting  
-title: CTF Team Strategy Meeting
+title: CTF Team Meeting
 date: 2024-11-20
 time: 8:00 PM
 location: LGRC 212
