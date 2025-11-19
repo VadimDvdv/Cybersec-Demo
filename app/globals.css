@@ -243,8 +243,6 @@ p {
   }
 }
 
-/* ADD THIS TO YOUR GLOBALS.CSS */
-
 /* Tag Filtering Styles */
 .filter-bar {
   margin-bottom: 2rem;
@@ -333,181 +331,211 @@ p {
   background: #aa2c2c;
 }
 
-/* COMPLETE DARK MODE STYLES */
-@media (prefers-color-scheme: dark) {
-  body {
-    color: #e0e0e0;
-    background-color: #0a0a0a;
-  }
-  
-  /* Typography */
-  h1 {
-    color: #f0f0f0;
-  }
-  
-  h2 {
-    color: #e0e0e0;
-  }
-  
-  h3 {
-    color: #d0d0d0;
-  }
-  
-  .intro {
-    color: #b0b0b0;
-  }
-  
-  /* Navigation */
-  .navbar {
-    background-color: #1a0707;
-    border-bottom: 1px solid #333;
-  }
-  
-  /* Cards and Containers */
-  .link-card {
-    background: #1a1a1a;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
-    border: 1px solid #2a2a2a;
-  }
-  
-  .link-card:hover {
-    box-shadow: 0 4px 8px rgba(0,0,0,0.7);
-    background: #222;
-  }
-  
-  .event-card {
-    background: #1a1a1a;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
-    border: 1px solid #2a2a2a;
-  }
-  
-  .event-card h2 {
-    color: #ff6b6b;
-  }
-  
-  .event-details {
-    background-color: #0f0f0f;
-    border: 1px solid #2a2a2a;
-  }
-  
-  .event-description {
-    color: #b0b0b0;
-  }
-  
-  /* Tags */
-  .tag {
-    background: #aa2c2c;
-    border: 1px solid #cc3c3c;
-  }
-  
-  .tag-active {
-    border-color: white;
-    box-shadow: 0 0 0 2px #ff6b6b;
-  }
-  
-  /* Filter Bar */
-  .filter-bar {
-    background: #1a1a1a;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
-    border: 1px solid #2a2a2a;
-  }
-  
-  .filter-label {
-    color: #b0b0b0;
-  }
-  
-  .filter-tag {
-    background: #2a2a2a;
-    color: #e0e0e0;
-    border: 2px solid #3a3a3a;
-  }
-  
-  .filter-tag:hover {
-    background: #3a3a3a;
-    border-color: #4a4a4a;
-  }
-  
-  .filter-tag.active {
-    background: #aa2c2c;
-    color: white;
-    border-color: #cc3c3c;
-  }
-  
-  /* Event Article Page */
-  .back-link {
-    color: #ff6b6b;
-  }
-  
-  .event-header {
-    border-bottom-color: #333;
-  }
-  
-  .event-meta {
-    color: #999;
-  }
-  
-  .event-content h2 {
-    color: #ff6b6b;
-  }
-  
-  .event-content {
-    color: #d0d0d0;
-  }
-  
-  /* No Events Message */
-  .no-events {
-    background: #1a1a1a;
-    border: 1px solid #2a2a2a;
-  }
-  
-  .no-events p {
-    color: #999;
-  }
-  
-  .clear-filter-btn {
-    background: #aa2c2c;
-  }
-  
-  .clear-filter-btn:hover {
-    background: #cc3c3c;
-  }
-  
-  /* Links */
-  a {
-    color: #ff6b6b;
-  }
-  
-  a:hover {
-    color: #ff8888;
-  }
-  
-  /* Scrollbar */
-  ::-webkit-scrollbar {
-    width: 12px;
-  }
-  
-  ::-webkit-scrollbar-track {
-    background: #1a1a1a;
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background: #4a4a4a;
-    border-radius: 6px;
-  }
-  
-  ::-webkit-scrollbar-thumb:hover {
-    background: #5a5a5a;
-  }
+/* theme toggle button */
+.theme-toggle-button {
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;              /* pill shape */
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: transparent;
+  color: inherit;                    /* inherits text color from navbar */
+  cursor: pointer;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.1s ease,
+    box-shadow 0.1s ease;
 }
 
-/* Additional mobile responsiveness for filters */
-@media (max-width: 768px) {
-  .filter-tags {
-    gap: 0.5rem;
-  }
-  
-  .filter-tag {
-    padding: 0.4rem 0.8rem;
-    font-size: 0.85rem;
-  }
+.theme-toggle-button:hover {
+  background-color: rgba(255, 255, 255, 0.14);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.theme-toggle-button:active {
+  transform: translateY(0);
+  background-color: rgba(255, 255, 255, 0.22);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.theme-toggle-button:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+}
+
+/* COMPLETE DARK MODE STYLES */
+
+html.dark body {
+  color: #e0e0e0;
+  background-color: #0a0a0a;
+}
+
+/* Typography */
+html.dark h1 {
+  color: #f0f0f0;
+}
+
+html.dark h2 {
+  color: #e0e0e0;
+}
+
+html.dark h3 {
+  color: #d0d0d0;
+}
+
+html.dark .intro {
+  color: #b0b0b0;
+}
+
+/* Navigation */
+html.dark .navbar {
+  background-color: #1a0707;
+  border-bottom: 1px solid #333;
+}
+
+/* Cards and Containers */
+html.dark .link-card {
+  background: #1a1a1a;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  border: 1px solid #2a2a2a;
+}
+
+html.dark .link-card:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.7);
+  background: #222;
+}
+
+html.dark .event-card {
+  background: #1a1a1a;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  border: 1px solid #2a2a2a;
+}
+
+html.dark .event-card h2 {
+  color: #ff6b6b;
+}
+
+html.dark .event-details {
+  background-color: #0f0f0f;
+  border: 1px solid #2a2a2a;
+}
+
+html.dark .event-description {
+  color: #b0b0b0;
+}
+
+/* Tags */
+html.dark .tag {
+  background: #aa2c2c;
+  border: 1px solid #cc3c3c;
+}
+
+html.dark .tag-active {
+  border-color: white;
+  box-shadow: 0 0 0 2px #ff6b6b;
+}
+
+/* Filter Bar */
+html.dark .filter-bar {
+  background: #1a1a1a;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  border: 1px solid #2a2a2a;
+}
+
+html.dark .filter-label {
+  color: #b0b0b0;
+}
+
+html.dark .filter-tag {
+  background: #2a2a2a;
+  color: #e0e0e0;
+  border: 2px solid #3a3a3a;
+}
+
+html.dark .filter-tag:hover {
+  background: #3a3a3a;
+  border-color: #4a4a4a;
+}
+
+html.dark .filter-tag.active {
+  background: #aa2c2c;
+  color: white;
+  border-color: #cc3c3c;
+}
+
+/* Event Article Page */
+html.dark .back-link {
+  color: #ff6b6b;
+}
+
+html.dark .event-header {
+  border-bottom-color: #333;
+}
+
+html.dark .event-meta {
+  color: #999;
+}
+
+html.dark .event-content h2 {
+  color: #ff6b6b;
+}
+
+html.dark .event-content {
+  color: #d0d0d0;
+}
+
+/* No Events Message */
+html.dark .no-events {
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+}
+
+html.dark .no-events p {
+  color: #999;
+}
+
+html.dark .clear-filter-btn {
+  background: #aa2c2c;
+}
+
+html.dark .clear-filter-btn:hover {
+  background: #cc3c3c;
+}
+
+/* Links */
+html.dark a {
+  color: #ff6b6b;
+}
+
+html.dark a:hover {
+  color: #ff8888;
+}
+
+/* Scrollbar */
+html.dark ::-webkit-scrollbar {
+  width: 12px;
+}
+
+html.dark ::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+html.dark ::-webkit-scrollbar-thumb {
+  background: #4a4a4a;
+  border-radius: 6px;
+}
+
+html.dark ::-webkit-scrollbar-thumb:hover {
+  background: #5a5a5a;
+}
+
+html.dark .theme-toggle-button {
+  border-color: rgba(255, 255, 255, 0.4);
+  /* background stays transparent to let dark navbar show through */
 }

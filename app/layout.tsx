@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { ThemeSwitch } from "@/lib/ThemeSwitch";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,6 +33,7 @@ export default function RootLayout({
               <a href="/">Home</a>
               <a href="/events">Events</a>
               <a href="/about">About</a>
+              <ThemeSwitch />
             </div>
           </div>
         </nav>
