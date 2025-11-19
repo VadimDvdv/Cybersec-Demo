@@ -48,7 +48,25 @@ export function getAllEvents(): EventData[] {
   
   // Sort events by date (newest first)
   return allEventsData.sort((a, b) => {
-    return new Date(b.date).getTime() - new Date(a.date).getTime();
+    const dateA = new Date(a.date);
+  const dateB = new Date(b.date);
+  const now = new Date();
+  
+  // Put future events first
+  const aIsFuture = dateA >= now;
+  const bIsFuture = dateB >= now;
+  
+  if (aIsFuture && !bIsFuture) return -1;
+  if (!aIsFuture && bIsFuture) return 1;
+  
+  // If both future or both past, sort by date
+  // Future events: earliest first
+  // Past events: most recent first
+  if (aIsFuture) {
+    return dateA.getTime() - dateB.getTime(); // Ascending for future
+  } else {
+    return dateB.getTime() - dateA.getTime(); // Descending for past
+  }
   });
 }
 

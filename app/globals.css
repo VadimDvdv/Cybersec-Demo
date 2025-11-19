@@ -243,7 +243,271 @@ p {
   }
 }
 
-/* Dark mode support */
+/* ADD THIS TO YOUR GLOBALS.CSS */
+
+/* Tag Filtering Styles */
+.filter-bar {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.filter-label {
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+.filter-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.filter-tag {
+  padding: 0.5rem 1rem;
+  background: #f0f0f0;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  color: #333;
+}
+
+.filter-tag:hover {
+  background: #e0e0e0;
+  transform: translateY(-2px);
+}
+
+.filter-tag.active {
+  background: #881c1c;
+  color: white;
+  border-color: #881c1c;
+}
+
+.clickable-tag {
+  cursor: pointer;
+  transition: all 0.3s;
+  border: 2px solid transparent;
+}
+
+.clickable-tag:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.tag-active {
+  border-color: white;
+  box-shadow: 0 0 0 2px #881c1c;
+}
+
+.no-events {
+  text-align: center;
+  padding: 3rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.no-events p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.clear-filter-btn {
+  padding: 0.75rem 1.5rem;
+  background: #881c1c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.clear-filter-btn:hover {
+  background: #aa2c2c;
+}
+
+/* COMPLETE DARK MODE STYLES */
 @media (prefers-color-scheme: dark) {
+  body {
+    color: #e0e0e0;
+    background-color: #0a0a0a;
+  }
   
+  /* Typography */
+  h1 {
+    color: #f0f0f0;
+  }
+  
+  h2 {
+    color: #e0e0e0;
+  }
+  
+  h3 {
+    color: #d0d0d0;
+  }
+  
+  .intro {
+    color: #b0b0b0;
+  }
+  
+  /* Navigation */
+  .navbar {
+    background-color: #1a0707;
+    border-bottom: 1px solid #333;
+  }
+  
+  /* Cards and Containers */
+  .link-card {
+    background: #1a1a1a;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    border: 1px solid #2a2a2a;
+  }
+  
+  .link-card:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.7);
+    background: #222;
+  }
+  
+  .event-card {
+    background: #1a1a1a;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    border: 1px solid #2a2a2a;
+  }
+  
+  .event-card h2 {
+    color: #ff6b6b;
+  }
+  
+  .event-details {
+    background-color: #0f0f0f;
+    border: 1px solid #2a2a2a;
+  }
+  
+  .event-description {
+    color: #b0b0b0;
+  }
+  
+  /* Tags */
+  .tag {
+    background: #aa2c2c;
+    border: 1px solid #cc3c3c;
+  }
+  
+  .tag-active {
+    border-color: white;
+    box-shadow: 0 0 0 2px #ff6b6b;
+  }
+  
+  /* Filter Bar */
+  .filter-bar {
+    background: #1a1a1a;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    border: 1px solid #2a2a2a;
+  }
+  
+  .filter-label {
+    color: #b0b0b0;
+  }
+  
+  .filter-tag {
+    background: #2a2a2a;
+    color: #e0e0e0;
+    border: 2px solid #3a3a3a;
+  }
+  
+  .filter-tag:hover {
+    background: #3a3a3a;
+    border-color: #4a4a4a;
+  }
+  
+  .filter-tag.active {
+    background: #aa2c2c;
+    color: white;
+    border-color: #cc3c3c;
+  }
+  
+  /* Event Article Page */
+  .back-link {
+    color: #ff6b6b;
+  }
+  
+  .event-header {
+    border-bottom-color: #333;
+  }
+  
+  .event-meta {
+    color: #999;
+  }
+  
+  .event-content h2 {
+    color: #ff6b6b;
+  }
+  
+  .event-content {
+    color: #d0d0d0;
+  }
+  
+  /* No Events Message */
+  .no-events {
+    background: #1a1a1a;
+    border: 1px solid #2a2a2a;
+  }
+  
+  .no-events p {
+    color: #999;
+  }
+  
+  .clear-filter-btn {
+    background: #aa2c2c;
+  }
+  
+  .clear-filter-btn:hover {
+    background: #cc3c3c;
+  }
+  
+  /* Links */
+  a {
+    color: #ff6b6b;
+  }
+  
+  a:hover {
+    color: #ff8888;
+  }
+  
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #1a1a1a;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #4a4a4a;
+    border-radius: 6px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #5a5a5a;
+  }
+}
+
+/* Additional mobile responsiveness for filters */
+@media (max-width: 768px) {
+  .filter-tags {
+    gap: 0.5rem;
+  }
+  
+  .filter-tag {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+  }
 }

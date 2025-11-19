@@ -7,7 +7,7 @@ A Next.js website for the UMass Amherst Cybersecurity Club, featuring event list
 - **Framework**: Next.js 15 with App Router
 - **Language**: TypeScript
 - **Styling**: CSS Modules
-- **Deployment**: Vercel (pending)
+- **Deployment**: Vercel
 
 ## Setup
 
@@ -21,6 +21,10 @@ A Next.js website for the UMass Amherst Cybersecurity Club, featuring event list
    npm run dev
 ```
 4. Open [http://localhost:3000](http://localhost:3000)
+
+OR
+
+Open https://cyberclub-demo.vercel.app/
 
 ## Project Structure
 ```
@@ -49,11 +53,10 @@ content/              # Markdown pages
 - Club information
 - Markdown-based events
 - Dynamic routing
-- API endpoints (coming Tuesday)
+- Vercel Deployment
 
 ## Next Steps
 
-- Deploy to Vercel
 - Add search/filter functionality
 
 ## Interview Demo
